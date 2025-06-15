@@ -5,10 +5,11 @@ import {
   GameSession,
   GameSessionSchema,
 } from '@game-engine/schemas/game-session.schema';
+import { GameSessionController } from '@game-engine/session/game-session.controller';
 import { GameSessionService } from '@game-engine/session/game-session.service';
 
 @Module({
-  controllers: [],
+  controllers: [GameSessionController],
   imports: [
     MongooseModule.forFeature([
       { name: GameSession.name, schema: GameSessionSchema },
